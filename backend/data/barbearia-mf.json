@@ -1,0 +1,33 @@
+{
+  "_leia": "Preencha com o PDF de levantamento e rode: python -m scripts.seed --file data/barbearia-mf.json (veja deploy/GUIA.md). Horários: 0=segunda ... 6=domingo; lista vazia = fechado. Preço em reais. Comissão em %. 'hours': null = usa o horário da casa. Barbeiro ou serviço removido do arquivo é desativado (não apagado).",
+  "shop": {
+    "name": "Barbearia MF",
+    "slug": "barbearia-mf",
+    "timezone": "America/Sao_Paulo",
+    "address": "R. Maria Aparecida, Qd 142, Lt 7-A · Parque Amazônia, Goiânia - GO",
+    "cep": "74843-180",
+    "whatsapp": "(62) 9455-4348",
+    "openingHours": {
+      "0": [{"opens": "09:00", "closes": "20:00"}],
+      "1": [{"opens": "09:00", "closes": "20:00"}],
+      "2": [{"opens": "09:00", "closes": "20:00"}],
+      "3": [{"opens": "09:00", "closes": "20:00"}],
+      "4": [{"opens": "09:00", "closes": "20:00"}],
+      "5": [{"opens": "09:00", "closes": "20:00"}],
+      "6": []
+    },
+    "settings": {"cancelMinHours": 2, "inactiveDays": 45, "barberSeesRevenue": true}
+  },
+  "barbers": [
+    {"name": "Zé", "commissionPct": 50, "hours": null, "active": true},
+    {"name": "Rafa", "commissionPct": 45, "hours": null, "active": true}
+  ],
+  "services": [
+    {"name": "Corte", "priceReais": 40.00, "durationMin": 45},
+    {"name": "Barba", "priceReais": 30.00, "durationMin": 30},
+    {"name": "Corte + barba", "priceReais": 65.00, "durationMin": 75},
+    {"name": "Barba com navalha", "priceReais": 35.00, "durationMin": 30},
+    {"name": "Pezinho", "priceReais": 15.00, "durationMin": 15},
+    {"name": "Sobrancelha", "priceReais": 15.00, "durationMin": 15}
+  ]
+}

@@ -1,0 +1,7 @@
+rules_version = '2';
+// Todo acesso passa pela API (Admin SDK ignora regras). Cliente direto: negado.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} { allow read, write: if false; }
+  }
+}
